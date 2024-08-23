@@ -1,16 +1,17 @@
 # flutter_google_map
 
-A new Flutter project.
+구글 맵 설정 방법 기재
+- [참고 자료](https://codelabs.developers.google.com/codelabs/google-maps-in-flutter?hl=ko#0)
 
-## Getting Started
+## IOS 설정 방법
+AppDelegate.swift
+- import GoogleMaps
+- GMSServices.provideAPIKey("key")
+상기의 코드 추가
 
-This project is a starting point for a Flutter application.
+Podfile
+- platform :ios, '14.0'
+상기의 주석 해제
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+xcode 설정
+- ios 버전을 14로 설정 (Podfile의 platform: ios가 14이기 때문에)
