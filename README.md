@@ -15,3 +15,8 @@ Podfile
 
 xcode 설정
 - ios 버전을 14로 설정 (Podfile의 platform: ios가 14이기 때문에)
+
+### 현재위치 권한 요청 & 현재위치 표시
+- info.plist에 코드 추가
+- FlutterBuilder 추가
+- checkPermission 추가
