@@ -15,8 +15,14 @@ class _MyAppState extends State<MyApp> {
   late GoogleMapController mapController;
 
   static LatLng universityLatLng = const LatLng(
-    37.3047, // 위도
-    127.9226, // 경도
+    35.186295, // 위도
+    129.077959, // 경도
+  );
+
+  // 회사 위치 마커 생성
+  static final Marker marker = Marker(
+    markerId: MarkerId('company'),
+    position: universityLatLng,
   );
 
   void _onMapCreated(GoogleMapController controller) {
@@ -48,7 +54,10 @@ class _MyAppState extends State<MyApp> {
                   target: universityLatLng,
                   zoom: 11.0,
                 ),
+                markers: Set.from([marker]),
                 myLocationEnabled: true,
+                zoomControlsEnabled: true,
+                zoomGesturesEnabled: true,
               );
             }
 
